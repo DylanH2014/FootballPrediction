@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('schedule', ['as'=>'schedule', 'uses' => 'ScheduleController@index']);
+Route::get('test', ['as'=>'test', 'uses'=>'ScheduleController@test']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
